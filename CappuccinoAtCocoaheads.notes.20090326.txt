@@ -1,0 +1,130 @@
+Cappuccino - "Cocoa for the Web"
+Released under the LGPL
+	Have to release changes to the framework, but applications can be completely closed source
+
+"The right way to make applications, period, regardless of where they are."
+
+Why the Web?
+	The web is getting more and more dynamic
+		Google Maps competes with the desktop
+			You don't really click on any hyperlinks
+	Overtime every app is going to need a desktop, phone, and web presence
+
+Why Cappuccino?
+	Previous frameworks focus on adding some dynamic elements to static pages
+	True Desktop class web applications can't rely on rolling your own every time
+	Put Cocoa on the web
+		Take as much of the APIs and and put them on the web, verbatim
+
+The two technologies
+Objective-J
+	Inspired by Objective-C
+		Objective-C is a small but powerful set of extensions to the standard ANSI C Language
+			Every single C library should continue working
+			We're just adding extra features
+		There were a number of approaches to add classes to C
+			C++
+	Objective-J is a small but powerful set of extensions to the standard ECMA Script language
+		Every feature that was added to C with Objective-C, was added to Javascript with Objective-J
+	Obj-C v. Obj-J
+		Similarities
+			Familiar message passing syntax
+			Objective-C style classes
+				versus Prototypal classes in Javascript
+					Can't subclass and can't call superclass implementations
+			Code Importing
+				Import file into code
+			Dynamic Runtime
+			Garbage Collection
+		Differences
+			Closures and lambda functions
+				From Javascript
+			Combines @interface with @implementation
+				One class declaration with implementation side-by-side, like Ruby or Java
+			Toll-free bridging to Javascript
+				CPArray to native Javascript array
+				CPNumber to native Javascript number
+				NOTE: Everything is an object in Javascript???
+			No points, malloc, etc
+				Not in Javascript
+	Interpreter runs right in the web browser
+		You don't need to compile your code
+Cappuccino
+	Application Framework
+	Currently a lot of the Javascript frameworks out there are actually libraries
+	Some things currently implemented in the Application Framework
+		Document Management
+			Open, Save, Revert, etc.
+		Content Editing
+			Undo and Redo
+			Copy / Paste
+				Automatically tied to all the right keys
+		Graphic and Views
+			Just like CoreGraphics in Cocoa
+	Cocoa vs. Cappuccino
+		Differences
+			CP instead of NS
+				The Openstep standard shouldn't be exactly implemented on the web
+			Asynchronous APIs
+			Cocoa frameworks only
+				Most of Foundation
+				Good chunk of AppKit
+				A lot of CoreGraphics
+				Beginnings of CoreAnimation
+			Things missing, things added
+				Theming
+				Web specific stuff
+					User session manager
+			Adapted to the web
+
+Big Hole - No Interface Builder
+	nib2cib
+		Cappuccino Interface Bundles
+		Working pretty well in 0.7b
+
+Upcoming
+	Aristo - by the guys from Sofa
+		Completely open source theme
+			Photoshop files are available
+		Something that looks good in any browser
+			"You'd be surprised how good we can make Windows look"
+	Atlas
+		Interface Builder is never going to be a complete solution
+			Web UI is different
+		Some features aren't in Interface Builder
+			Theming
+			Built-in controllers that talk to existing web services
+				e.g., RSS controller
+			Fixed SplitView (since you basically need a deleate for it to do anything useful)
+		Ported Interface Builder API to Atlas
+			If you have an Interface Builder plugin, it'll work in Atlas
+	
+
+Q&A
+	How big is the app?
+		Frameworks (uncompressed) 750kof code, (gzipped) 100k + images
+		Cacheable 
+		Interesting tidbit, uncached 280 Slides loads faster than Keynote or PowerPoint
+		press - tool to that removes big parts of the frameworks that you don't use
+			Originally written for iPhone development
+	Are you downloading it all at once?
+
+	CoreAnimation
+		VML in IE
+		Canvas in Safari, Firefox, and Opera
+			Canvas that takes care of the transformation layer
+	
+	Backend
+		It'll work with any RESTful server
+			CPDocumentController works on the backend RESTfully
+			JavaRPC bridge
+				Serialize data and Java will deserialize
+			Jack
+				Rack in Ruby to Javascript --> Jack
+			Most of Application logic is on the client, not the server
+				Serverside
+					Grab this string and put it in the database, or grab a string from the database
+				Almost all client-side programming
+		Currently no support for Google Gears or HTML5
+			But it is something that's important
+			Could be built into the document architecture
