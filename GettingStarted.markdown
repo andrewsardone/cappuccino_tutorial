@@ -1,10 +1,10 @@
-Installation
-=============
+Getting Started
+===============
 
 This tutorial will only focus on the 0.7b branch and onward.
 
-Grab the Source
-----------------------
+Prerequisites 
+-------------
 
 First, make sure you have the necessary tools:
 
@@ -21,8 +21,8 @@ Then, grab the code from [GitHub](http://github.com/280north/cappuccino/)
 	$ git clone git://github.com/280north/cappuccino.git && cd cappuccino
 	$ git checkout -b 0.7b origin/0.7b
 	
-Build and Install
------------------
+Installation
+------------
 
 	$ rake release
 	$ rake install
