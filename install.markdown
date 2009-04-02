@@ -12,7 +12,9 @@ First, make sure you have the necessary tools:
 	*	rake version >= 0.8.3
 	*	plist gem version >= 3.0.0: `sudo gem install plist`
 *	[Java 1.5](http://www.java.com/)
-*	A *nix machine (not a real requirement, but you'll have to refer to the official documentation for Windows help)
+*	[GCC](http://gcc.gnu.org/)
+*	If you're using Windows, [Cygwin](http://www.cygwin.com/)
+*	[Git](http://git-scm.com/)
 
 Then, grab the code from [GitHub](http://github.com/280north/cappuccino/)
 
