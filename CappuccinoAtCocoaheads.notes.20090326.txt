@@ -1,3 +1,5 @@
+http://www.viddler.com/explore/cocoaheads/videos/7/
+
 Cappuccino - "Cocoa for the Web"
 Released under the LGPL
 	Have to release changes to the framework, but applications can be completely closed source
