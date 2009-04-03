@@ -15,3 +15,9 @@ Sources and Helpful Links
 *	[CappuccinoCasts](http://cappuccinocasts.com/)
 *	[Cappuccino & Objective-J Google Group](http://groups.google.com/group/objectivej)
 *	[Nice Panorama Cappuccino Tutorials](http://nice-panorama.com/Programmation/cappuccino/)
+
+TODO
+----
+
+*	Port to GitHub page
+*	Flesh out *Why the Web* and *Why Cappuccino* sections
